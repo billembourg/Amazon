@@ -1,0 +1,142 @@
+main
+    div.color_fondo 
+        height: 120rem
+    background-color: #E3E6E6
+    a
+        color: black
+        i.bx-chevron-left
+            font-size: 100px
+            position: absolute
+            @include margin(80px,60px)
+            z-index:3
+        
+        i.bx-chevron-right
+            font-size: 100px
+            position: absolute
+            @include margin(80px,95rem)
+            z-index:3
+
+    .carrusel img
+        background-color: line
+        width: 100rem
+        @include Flex()
+        margin: auto
+        position: relative
+        //z-index:0.1
+    .carrusel::after
+        content: ""
+        margin-top: 1000ox
+        @include an_lar(90%,100%)
+        position: absolute
+        left: 0
+        bottom: 0
+        background-image: linear-gradient(to top, #E3E6E6, transparent)
+        //z-index: 0 
+        //background-image: linear-gradient(to top, black, transparent)    
+    
+
+    section.tarjetas
+        width: 90%
+        @include margin(-500px,1rem,1rem)
+        position: absolute
+        justify-content: center
+        align-content: center
+        
+        .tarjetas_2
+            // width: 20%
+            @include margin(100px,90px)
+            display: grid
+            grid-template-columns: 350px 350px 350px 350px 
+            column-gap: 20px
+            row-gap: 20px
+            z-index:1
+            .tarj                         
+                //border: 1px solid black
+                @include an_lar(400px,350px)
+                h3
+                    font-size: 20px
+            .tarjeta_1
+                background-color: white
+                @include padding(auto,1rem,auto,1.5rem)
+                div.secciones                  
+                    display: grid
+                    grid-template-columns: 10rem 10rem
+                    align-content: center
+                    justify-content: center
+                    margin-left: -10px
+                    div
+                        padding-top: 20px               
+                    img
+                        height: 5.9rem
+                        padding: 0
+                    span
+                        font-size: 12px
+                        color: black
+                        @include margin(-20px,3px)
+                        
+                a.sec3
+                    margin-top: 2.9rem
+                    font-size: 13px
+                    color: #007185
+                a.sec3:hover 
+                    color: #C7511F
+                    text-decoration: underline
+            .tarjeta_2
+                background-color: white
+                @include padding(auto,20px,auto,25px)
+                div
+                    margin-bottom: 9px
+                    img.img_sec_2
+                        padding-top: 10px
+                        @include an_lar(305px,300px)
+            a.sec3
+                //margin-top: 6px
+                font-size: 13px
+                color: #007185
+            
+
+            a.sec3:hover 
+                color: #C7511F
+                text-decoration: underline
+            img.img_sec_3
+                margin-top: 33px
+                height: 250px
+            img.img_sec_5
+                @include margin(10px,auto,auto,10px)
+                @include an_lar(280px,310px)
+            img.img_sec_7
+                margin-top: 10px             
+                @include an_lar(240px,300px)
+            img.img_sec_9 
+                @include margin(20px,auto,auto,12px)
+                width: 310px
+            img.img_sec_10 
+                @include margin(40px,auto,auto,10px)
+                width: 310px
+            img.img_sec_11 
+                @include margin($mt:40px,$mb:10px)
+                width: 310px
+            img.img_sec_14
+                @include margin(13px,12px,auto,-1px)
+                @include an_lar(290px,285px)
+            span.span_tarje_1a
+                background-color: #CC0C39
+                color: white
+                padding: 5px
+                border-radius: 4px 
+                font-size: 13px
+            span.span_tarje_1b                
+                color: #D22850
+                font-weight: 700
+                padding: 5px 
+                font-size: 12px
+            span.span_tarje_1c                
+                color: black
+                display: block
+                padding-top: 10px
+                font-size: 13px
+                margin-bottom: 15px
+            a.sec3_6 
+                font-size: 13px
+                color: #007185
+                margin-top: 20px

@@ -1,0 +1,426 @@
+nav 
+    .nav-1
+        @include an_lar(60px,100%)
+        background-color: #131921
+        @include Flex(space-between)
+        padding: 10px
+        //position: fixed
+        grid-gap: 20px
+        top: 0
+        left: 0
+        z-index:0.1
+        // divisiones     
+        a           
+            color: white
+            font-family: Arial, Helvetica, sans-serif
+            font-size: 15px
+            border: 1.5px solid transparent
+            padding: 0
+            //Logo
+            .div_ubi
+                display: flex
+                i
+                    font-size: 20px
+                span
+                    padding-top: 4px  
+            img
+                text-align: center
+                @include an_lar(65px,120px)
+                padding: 0
+                margin-top: 10px
+        .nav-logo
+            @include an_lar(45px)          
+            img
+                margin-top: -6px
+                height: 60px
+                position: relative
+                         
+        //Div enviar a
+        .nav-ubication
+            height: 50px
+            padding-top: 7px
+        .enviar
+            margin-left: 17px
+            font-size: 0.72rem
+            color: gray
+        .estilo_letra_bajo
+            font-size: 0.9rem
+            font-weight: 700
+        .p_1 
+            font-size: 0.72rem
+        //Buscador
+        div.nav-buscador 
+            @include Flex(center,0px)
+            @include an_lar(45px,70%)
+            border: 0px
+            select
+                border-radius: 7px 0px 0px 7px
+                background-color: #f3f3f3
+                border-right-color: #CDCDCD
+                @include an_lar(46.6px,7%)
+                margin-top: -0.6px
+                text-align: center
+                color: Gray 
+            select:hover
+                background-color: #D4D4D4
+                color: black
+            input
+                @include padding(auto,5px)
+                width: 86%
+                border: none
+                font-size: 1.1rem
+
+            button
+                background-color: #febd68
+                padding: 10px 0px
+                width: 5%     
+                border-radius: 0px 7px 7px 0px
+                border: none
+                font-size: 1.6rem
+
+        .dropdown 
+            position: relative
+            display: inline-block        
+            .nav-pais
+                @include Flex()
+                @include an_lar(40px)
+                padding-bottom: 1px
+                i
+                    color: #A7ACB2
+                    @include padding(auto,3px,auto,20px)
+                    font-size: 8px
+                span
+                    padding-top: 13px
+                    font-size: 20
+                    font-weight: 700
+                img
+                    margin-right: 8px
+                    @include an_lar(23px,23px)
+                //border: 2px solid orange
+
+
+        /* Dropdown Button */
+        .dropbtn 
+            color: white
+            font-size: 16px
+            border: none
+            /* The container <div> - needed to position the dropdown content */
+
+            /* Dropdown Content (Hidden by Default) */
+        .dropdown-content
+
+            color: gray
+            font-size: 13px
+            display: none
+            position: absolute
+            background-color: #FFFFFF
+            min-width: 260px
+            height: 460px
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+            z-index: 5
+            @include padding(20px,15px,15px,20px)
+            p
+                a
+                    font-size: 12px
+            a
+                margin-left: 35px
+                font-size: 12px
+            hr 
+                @include margin(2px,auto,auto,2px)          
+                margin-top: 2px
+                margin-bottom: 2px
+        .espaciador
+            @include padding(5px,auto,auto,5px)
+            img
+                width: 18px
+                margin-right: 5px
+            input
+                margin: 2px
+            .a_1
+                padding-right: 0px
+                margin-left: 160px
+                font-size: 13px
+
+        /* Links inside the dropdown */
+
+        .dropdown-content a 
+            color: #007185
+            text-decoration: none
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover 
+            text-decoration: underline
+            cursor: pointer
+            color: orange
+
+        /* Radio */
+        .dropdown-content input[type="radio"] 
+            cursor: pointer
+            accent-color: orange
+
+        .dropdown-content label
+            cursor: pointer        
+
+        .dropdown-content label:hover 
+            cursor: pointer
+            color: orange
+            text-decoration: underline
+        
+        .dropdown-content span 
+            color: #007185
+
+        .dropdown-content span:hover 
+            color: #007185
+            text-decoration: underline
+            text-decoration-color: orange
+
+        .esp_tot0
+            display: none
+            @include margin(90px,-1240px)            
+            @include an_lar(100vh,100vw)
+            background-color: Black
+            opacity: 0.5
+            left: 0
+            top: 0
+            position: absolute
+            z-index: 4
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content 
+            display: block
+
+        .dropdown:hover .esp_tot0 
+            display: block
+
+        .dropdown_2 
+            @include an_lar(45px,153px)       
+            padding-top: 5px
+            .nav-cuenta   
+                padding-top: 5px 
+                position: absolute       
+                p
+                    display: flex
+                    i               
+                        @include padding(auto,3px,auto,5px) 
+                        color: #A7ACB2
+                        font-size: 8px
+            
+        .dropdown2-content
+            color: gray
+            font-size: 13px
+            display: none
+            position: absolute
+            background-color: #FFFFFF
+            min-width: 500px
+            height: 400px
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+            z-index: 5
+            @include margin(40px,-260px)
+            @include padding(auto,10px,0px,10px)
+        .esp_tot
+            display: none
+            margin-top: 86px
+            @include an_lar(100%,100%)
+            background-color: Black
+            opacity: 0.5
+            left: 0
+            position: absolute
+            z-index: 4
+        .dropdown_2:hover .dropdown2-content 
+            display: block
+
+        .dropdown_2:hover .esp_tot
+            display: block
+
+        .dropdown2-content
+            background-color: #FFFFFF
+            padding-right: 10px
+            hr
+                color: #919599
+        .dropdown_2_1
+            @include padding(auto,7rem,7rem)
+            margin-bottom: 15px
+            button
+                background-color: #FFD814
+                border-style: none
+                border-radius: 5px
+                @include margin(8px,1rem,auto,10px)
+                @include an_lar(35px,87%)
+                display: block
+            button
+                cursor: pointer
+            span
+                @include Flex()
+                font-size: 11px
+                
+            a
+                padding-left: 10px
+                font-size: 11px
+                color: #007185
+            a:hover 
+                color: #C7511F
+
+        .dropdown_2_2
+            @include padding(auto,1rem,auto,10px)
+            display: flex
+            width: 500px
+            color: black
+            li
+                list-style: none
+                @include padding(4px,auto,auto,5px)
+            a
+                color: #919599
+                font-size: 13px
+            a:hover  
+                 color: #C7511F
+                 text-decoration: underline  
+            h3
+                font-size: 16px
+                color: #232F3E
+            .colum_2
+                width: 500px
+                margin-left: 20px
+                padding-left: 80px
+            .colum_1
+                width: 400px   
+
+        .nav-carrito
+            width: 100px
+            display: flex
+            font-weight: 700
+            span
+                margin-top: 19px
+                padding-top: 2px
+            img
+                @include an_lar(36px,40px)
+                @include margin(auto,auto,4px,7px)       
+        .nav-devoluciones
+                height: 40px
+                padding-top: 5px
+        
+            
+    .nav-2
+        color: white
+        background-color: #232F3E
+        @include an_lar(40px,100%)
+        @include Flex(20px, 50px,)
+        div
+            margin-top: 3px
+            width: auto
+            padding: 8px 10px
+            font-size: 0.9rem
+            font-weight: 700
+        span 
+            color: white
+        i
+            font-size: 30px
+            margin-top: -6px
+            position: absolute
+        .menu_abrir
+                font-size: 15px
+                @include margin(-20px,28px)
+        menu
+            @include Flex()
+    .menu
+        i
+            color: white
+    .border
+        border: 1.5px solid transparent
+
+    .border:hover
+        border: 1.5px solid white
+    
+
+
+    .menu_desple
+        height: 100%
+        min-width:350px
+        background-color: white
+        position: fixed
+        z-index: 6
+        top: 0
+        left: 0
+        overflow-y: scroll      
+        
+        
+        .boton_cerrar
+            padding: 0
+            position: fixed
+            margin-left: 350px
+            button
+                background-color: black 
+                opacity: 0.5
+                @include an_lar(2000px,2000px)
+            a
+                color: white
+                i
+                    top: 0
+                    left: 0
+                    position: absolute
+                    font-size: 50px
+        .cabeza  
+            @include margin(0px,auto,auto,20px)
+            background-color: #232F3E
+            @include an_lar(60px,100%)
+            padding-top: 15px
+            i 
+                padding: 5px
+                margin-left: 0
+                border: 1px solid white
+                border-radius: 100%
+            a    
+                color: white              
+            p
+                padding-top: 10px
+                margin-left: 20%
+                font-size: 20px
+        
+        .menu_1
+            background-color: white
+            @include an_lar(200px,300px)
+            h3
+                color: #111111
+                @include padding(15px,30px)      
+            li
+                @include padding(20px,30px,auto,10px)
+                font-size:13px
+                a
+                    color: #4D4E4E
+                i
+                    margin-left: 100px
+                    float: inline-end
+        .menu_2
+            background-color: white
+            height: 270px
+            margin: 0px
+            h3
+                @include padding(15px,30px,auto,10px)
+                color: #111111
+            li
+                @include padding(20px,30px,auto,10px)
+                font-size:13px
+                a
+                    color: #4D4E4E
+        .menu_3
+            background-color: white
+            height: 270px
+            margin: 0px
+            h3
+                @include padding(15px,30px,auto,10px)
+                color: #111111
+            li
+                @include padding(20px,30px,auto,10px)
+                font-size:13px
+                a
+                    color: #4D4E4E  
+        .menu_4
+            background-color: white
+            height: 270px
+            margin: 0px
+            h3
+                @include padding(15px,30px,auto,10px)
+                color: #111111
+            li
+                @include padding(20px,30px,auto,10px)
+                font-size:13px
+                a
+                    color: #4D4E4E

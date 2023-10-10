@@ -1,0 +1,224 @@
+footer
+    margin-top: 5px
+    div.footer-1
+        padding-top: 40px
+        margin-bottom: 20px
+        .div1
+            width: 100%
+            display: flex
+            flex-direction: column           
+            text-align: center
+            color: black
+            border: 1px solid #DDDDDD
+            @include padding(20px,auto,auto,30px)
+            p
+                margin-bottom: 5px
+            .div1-1
+                padding-top: 5px
+                font-size: 12px
+                a
+                    text-decoration: none
+                    color: #007185
+                    margin-left: 2px
+            button
+                background-color: #ffd261
+                @include an_lar(25px,230px)
+                @include Flex()
+                margin: auto
+                border: none
+                text-decoration: none
+                //outline: none
+                box-shadow: inset 0px 9px 0px #ffe093, 
+                border-radius: 5px
+                font-weight: 750
+                background-image: linear-gradient(to top, ffd261, transparent)
+            button:hover 
+                cursor: pointer
+    div.volver_inic
+        @include an_lar(50px,100%)
+        background-color: #37475A    
+        a
+            text-decoration: none
+            color: white
+            font-size: 13px
+            @include Flex()
+            @include padding(16px,auto,auto,15px)
+        a:hover 
+            text-decoration: underline
+            background-color: #485769
+    
+    div.footer-2
+        background-color: #232F3E
+        padding-top: 50px
+        height: 450px
+        @include Flex(center,flex_start)
+        h3
+            font-size: 17px
+            color: white
+            font-weight: 750
+        li
+            margin-top: 15px
+            list-style: none
+            a
+                text-decoration: none
+                color: #DDDDDD
+                font-size: 14px
+        div.footer-2_1
+            margin-right: 40px           
+            width: 70px
+            a:hover 
+                text-decoration: underline
+        div.footer-2_2
+            margin-left: 80px
+            width: 220px
+            a:hover 
+                text-decoration: underline
+            //margin-right: 100px
+        div.footer-2_3
+            @include margin($ml:80px,$mr:100px)
+            width: 250px
+            a:hover 
+                text-decoration: underline
+        div.footer-2_4
+            width: 145px
+            a:hover 
+                text-decoration: underline
+    
+    div.footer-3
+        @include Flex()
+        background-color: #232F3E
+        border-top: 1px solid #919599
+        height: 100px
+        font-size: 13px
+        .dropdown_3 
+            position: relative
+            display: inline-block   
+            height: 10  
+        .footer-3_2
+            i
+                font-size: 16px
+                padding: 2px
+        .dropdown-content_footer
+
+            color: gray
+            font-size: 13px
+            display: none
+            position: absolute
+            background-color: #FFFFFF
+            min-width: 250px
+            height: 300px
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+            z-index: 5
+            @include padding(20px,15px,15px,20px)
+            p
+                a   
+                    color: #007185
+                    font-size: 12px
+            a
+                margin-left: 35px
+                font-size: 12px
+            hr 
+                @include margin($mt:4px,$mb:4px)
+        
+        .espaciador
+            @include padding(5px,auto,auto,5px)
+            img
+                width: 18px
+                margin-right: 5px
+            input
+                margin: 2px
+            .a_1
+                padding-right: 0px
+                margin-left: 160px
+                font-size: 13px
+
+        .dropdown_3:hover .dropdown-content_footer
+            display: block
+        .footer-3_1
+            margin-right: 5rem
+            position: relative
+            img
+                @include margin(10px,-80px)
+                height: 50px
+        .footer-3_4
+            a
+                display: flex
+                
+                img
+                    @include margin(-2px,auto,8px)
+                    height: 20px
+                    width: 20px
+                span
+                    padding-top: 2px                  
+
+        .border
+            border: 1px solid #919599
+            height: 35px
+            border-radius: 3px
+            margin-left: 20px
+            @include padding(auto,5px,5px,5px)
+            a
+                text-decoration: none
+                color: white
+                span
+                    color: #919599
+    div.footer-4 
+        @include Flex(center,flex_start)
+        height: 550px
+        padding-top: 20px
+        background-color: #131A22
+        margin: auto
+        div.footer-4_1
+            margin-right: 30px           
+            width: 100px
+        div.footer-4_2
+            margin-left: 20px
+            width: 145px
+            //margin-right: 100px
+        div.footer-4_3
+            @include margin($ml:40px,$mr:20px)
+            width: 140px
+        div.footer-4_4
+            @include margin($ml:20px,$mr:20px)
+            width: 155px
+        div.footer-4_5
+            @include margin($ml:20px,$mr:20px)
+            width: 150px
+        div.footer-4_6
+            @include margin($ml:20px,$mr:20px)
+            width: 140px
+        li
+            list-style: none
+            @include margin($mt:35px,$mr:20px)
+            height: 60px          
+            a
+                text-decoration: none
+                font-size: 13px
+                color: white
+                span
+                    display: block
+                .span2
+                    color: #919599
+                    font-size: 10
+            a:hover 
+                text-decoration: underline
+                .a1
+                    color: #919599
+            .a1
+                color: #919599
+    .final
+        background-color: #131A22
+        height: 70px
+        padding-bottom: 30px
+        text-align: center
+        color: #DDDDDD   
+        font-size: 12px  
+        div
+            margin-bottom: 8px
+            a
+                margin-right: 15px
+                color: #DDDDDD
+            img
+                position: absolute
+                height: 23px
+                margin-top: -5px

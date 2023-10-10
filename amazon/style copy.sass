@@ -1,0 +1,841 @@
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: Arial, Helvetica, sans-serif
+    text-decoration: none
+#menu
+    top: 0
+    padding: 0
+    margin: 0
+    display: none
+@mixin padding($pb:auto,$pl:auto,$pr:auto,$pt:auto)
+    padding-bottom: $pb
+    padding-left: $pl
+    padding-right: $pr
+    padding-top: $pt
+    
+@mixin Flex($jc:center, $ai:center, $dir:row)
+    display: flex
+    justify-content: $jc
+    align-items: $ai
+    flex-direction: $dir
+@mixin an_lar($hei:auto,$wid:auto)
+    height: $hei
+    width: $wid
+@mixin margin($mt:auto,$ml:auto,$mr:auto,$mb:auto)
+    margin-top: $mt
+    margin-left: $ml
+    margin-right: $mr
+    margin-bottom: $mb
+        
+#menu:target 
+    display: block
+nav
+    
+    .nav-1
+        @include an_lar(60px,100%)
+        background-color: #131921
+        @include Flex(space-between)
+        padding: 10px
+        //position: fixed
+        grid-gap: 20px
+        top: 0
+        left: 0
+        z-index:0.1
+        // divisiones     
+        a           
+            color: white
+            font-family: Arial, Helvetica, sans-serif
+            font-size: 15px
+            border: 1.5px solid transparent
+            padding: 0
+            //Logo
+            .div_ubi
+                display: flex
+                i
+                    font-size: 20px
+                span
+                    padding-top: 4px  
+            img
+                text-align: center
+                @include an_lar(65px,120px)
+                padding: 0
+                margin-top: 10px
+        .nav-logo
+            @include an_lar(45px)          
+            img
+                margin-top: -6px
+                height: 60px
+                position: relative
+                         
+        //Div enviar a
+        .nav-ubication
+            height: 50px
+            padding-top: 7px
+        .enviar
+            margin-left: 17px
+            font-size: 0.72rem
+            color: gray
+        .estilo_letra_bajo
+            font-size: 0.9rem
+            font-weight: 700
+        .p_1 
+            font-size: 0.72rem
+        //Buscador
+        div.nav-buscador 
+            @include Flex(center,0px)
+            @include an_lar(45px,70%)
+            border: 0px
+            select
+                border-radius: 7px 0px 0px 7px
+                background-color: #f3f3f3
+                border-right-color: #CDCDCD
+                @include an_lar(46.6px,7%)
+                margin-top: -0.6px
+                text-align: center
+                color: Gray 
+            select:hover
+                background-color: #D4D4D4
+                color: black
+            input
+                @include padding(auto,5px)
+                width: 86%
+                border: none
+                font-size: 1.1rem
+
+            button
+                background-color: #febd68
+                padding: 10px 0px
+                width: 5%     
+                border-radius: 0px 7px 7px 0px
+                border: none
+                font-size: 1.6rem
+
+        .dropdown 
+            position: relative
+            display: inline-block        
+            .nav-pais
+                @include Flex()
+                @include an_lar(40px)
+                padding-bottom: 1px
+                i
+                    color: #A7ACB2
+                    @include padding(auto,3px,auto,20px)
+                    font-size: 8px
+                span
+                    padding-top: 13px
+                    font-size: 20
+                    font-weight: 700
+                img
+                    margin-right: 8px
+                    @include an_lar(23px,23px)
+                //border: 2px solid orange
+
+
+        /* Dropdown Button */
+        .dropbtn 
+            color: white
+            font-size: 16px
+            border: none
+            /* The container <div> - needed to position the dropdown content */
+
+            /* Dropdown Content (Hidden by Default) */
+        .dropdown-content
+
+            color: gray
+            font-size: 13px
+            display: none
+            position: absolute
+            background-color: #FFFFFF
+            min-width: 260px
+            height: 460px
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+            z-index: 5
+            @include padding(20px,15px,15px,20px)
+            p
+                a
+                    font-size: 12px
+            a
+                margin-left: 35px
+                font-size: 12px
+            hr 
+                @include margin(2px,auto,auto,2px)          
+                margin-top: 2px
+                margin-bottom: 2px
+        .espaciador
+            @include padding(5px,auto,auto,5px)
+            img
+                width: 18px
+                margin-right: 5px
+            input
+                margin: 2px
+            .a_1
+                padding-right: 0px
+                margin-left: 160px
+                font-size: 13px
+
+        /* Links inside the dropdown */
+
+        .dropdown-content a 
+            color: #007185
+            text-decoration: none
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover 
+            text-decoration: underline
+            cursor: pointer
+            color: orange
+
+        /* Radio */
+        .dropdown-content input[type="radio"] 
+            cursor: pointer
+            accent-color: orange
+
+        .dropdown-content label
+            cursor: pointer        
+
+        .dropdown-content label:hover 
+            cursor: pointer
+            color: orange
+            text-decoration: underline
+        
+        .dropdown-content span 
+            color: #007185
+
+        .dropdown-content span:hover 
+            color: #007185
+            text-decoration: underline
+            text-decoration-color: orange
+
+        .esp_tot0
+            display: none
+            @include margin(90px,-1240px)            
+            @include an_lar(100vh,100vw)
+            background-color: Black
+            opacity: 0.5
+            left: 0
+            top: 0
+            position: absolute
+            z-index: 4
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content 
+            display: block
+
+        .dropdown:hover .esp_tot0 
+            display: block
+
+        .dropdown_2 
+            @include an_lar(45px,153px)       
+            padding-top: 5px
+            .nav-cuenta   
+                padding-top: 5px 
+                position: absolute       
+                p
+                    display: flex
+                    i               
+                        @include padding(auto,3px,auto,5px) 
+                        color: #A7ACB2
+                        font-size: 8px
+            
+        .dropdown2-content
+            color: gray
+            font-size: 13px
+            display: none
+            position: absolute
+            background-color: #FFFFFF
+            min-width: 500px
+            height: 400px
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+            z-index: 5
+            @include margin(40px,-260px)
+            @include padding(auto,10px,0px,10px)
+        .esp_tot
+            display: none
+            margin-top: 86px
+            @include an_lar(100%,100%)
+            background-color: Black
+            opacity: 0.5
+            left: 0
+            position: absolute
+            z-index: 4
+        .dropdown_2:hover .dropdown2-content 
+            display: block
+
+        .dropdown_2:hover .esp_tot
+            display: block
+
+        .dropdown2-content
+            background-color: #FFFFFF
+            padding-right: 10px
+            hr
+                color: #919599
+        .dropdown_2_1
+            @include padding(auto,7rem,7rem)
+            margin-bottom: 15px
+            button
+                background-color: #FFD814
+                border-style: none
+                border-radius: 5px
+                @include margin(8px,1rem,auto,10px)
+                @include an_lar(35px,87%)
+                display: block
+            button
+                cursor: pointer
+            span
+                @include Flex()
+                font-size: 11px
+                
+            a
+                padding-left: 10px
+                font-size: 11px
+                color: #007185
+            a:hover 
+                color: #C7511F
+
+        .dropdown_2_2
+            @include padding(auto,1rem,auto,10px)
+            display: flex
+            width: 500px
+            color: black
+            li
+                list-style: none
+                @include padding(4px,auto,auto,5px)
+            a
+                color: #919599
+                font-size: 13px
+            a:hover  
+                 color: #C7511F
+                 text-decoration: underline  
+            h3
+                font-size: 16px
+                color: #232F3E
+            .colum_2
+                width: 500px
+                margin-left: 20px
+                padding-left: 80px
+            .colum_1
+                width: 400px   
+
+        .nav-carrito
+            width: 100px
+            display: flex
+            font-weight: 700
+            span
+                margin-top: 19px
+                padding-top: 2px
+            img
+                @include an_lar(36px,40px)
+                @include margin(auto,auto,4px,7px)       
+        .nav-devoluciones
+                height: 40px
+                padding-top: 5px
+        
+            
+    .nav-2
+        color: white
+        background-color: #232F3E
+        @include an_lar(40px,100%)
+        @include Flex(20px, 50px,)
+        div
+            margin-top: 3px
+            width: auto
+            padding: 8px 10px
+            font-size: 0.9rem
+            font-weight: 700
+        span 
+            color: white
+        i
+            font-size: 30px
+            margin-top: -6px
+            position: absolute
+        .menu_abrir
+                font-size: 15px
+                @include margin(-20px,28px)
+        menu
+            @include Flex()
+    .menu
+        i
+            color: white
+    .border
+        border: 1.5px solid transparent
+
+    .border:hover
+        border: 1.5px solid white
+    
+
+
+    .menu_desple
+        height: 100%
+        min-width:350px
+        background-color: white
+        position: fixed
+        z-index: 6
+        top: 0
+        left: 0
+        overflow-y: scroll      
+        
+        
+        .boton_cerrar
+            padding: 0
+            position: fixed
+            margin-left: 350px
+            button
+                background-color: black 
+                opacity: 0.5
+                @include an_lar(2000px,2000px)
+            a
+                color: white
+                i
+                    top: 0
+                    left: 0
+                    position: absolute
+                    font-size: 50px
+        .cabeza  
+            @include margin(0px,auto,auto,20px)
+            background-color: #232F3E
+            @include an_lar(60px,100%)
+            padding-top: 15px
+            i 
+                padding: 5px
+                margin-left: 0
+                border: 1px solid white
+                border-radius: 100%
+            a    
+                color: white              
+            p
+                padding-top: 10px
+                margin-left: 20%
+                font-size: 20px
+        
+        .menu_1
+            background-color: white
+            @include an_lar(200px,300px)
+            h3
+                color: #111111
+                @include padding(15px,30px)      
+            li
+                @include padding(20px,30px,auto,10px)
+                font-size:13px
+                a
+                    color: #4D4E4E
+                i
+                    margin-left: 100px
+                    float: inline-end
+        .menu_2
+            background-color: white
+            height: 270px
+            margin: 0px
+            h3
+                @include padding(15px,30px,auto,10px)
+                color: #111111
+            li
+                @include padding(20px,30px,auto,10px)
+                font-size:13px
+                a
+                    color: #4D4E4E
+        .menu_3
+            background-color: white
+            height: 270px
+            margin: 0px
+            h3
+                @include padding(15px,30px,auto,10px)
+                color: #111111
+            li
+                @include padding(20px,30px,auto,10px)
+                font-size:13px
+                a
+                    color: #4D4E4E  
+        .menu_4
+            background-color: white
+            height: 270px
+            margin: 0px
+            h3
+                @include padding(15px,30px,auto,10px)
+                color: #111111
+            li
+                @include padding(20px,30px,auto,10px)
+                font-size:13px
+                a
+                    color: #4D4E4E
+
+
+
+main
+   div.color_fondo 
+        height: 120rem
+main
+    background-color: #E3E6E6
+    a
+        color: black
+        i.bx-chevron-left
+            font-size: 100px
+            position: absolute
+            @include margin(80px,60px)
+            z-index:3
+        
+        i.bx-chevron-right
+            font-size: 100px
+            position: absolute
+            @include margin(80px,95rem)
+            z-index:3
+
+    .carrusel img
+        background-color: line
+        width: 100rem
+        @include Flex()
+        margin: auto
+        position: relative
+        //z-index:0.1
+    .carrusel::after
+        content: ""
+        margin-top: 1000ox
+        @include an_lar(90%,100%)
+        position: absolute
+        left: 0
+        bottom: 0
+        background-image: linear-gradient(to top, #E3E6E6, transparent)
+        //z-index: 0 
+        //background-image: linear-gradient(to top, black, transparent)    
+    
+
+    section.tarjetas
+        width: 90%
+        @include margin(-500px,1rem,1rem)
+        position: absolute
+        justify-content: center
+        align-content: center
+        
+        .tarjetas_2
+            // width: 20%
+            @include margin(100px,90px)
+            display: grid
+            grid-template-columns: 350px 350px 350px 350px 
+            column-gap: 20px
+            row-gap: 20px
+            z-index:1
+            .tarj                         
+                //border: 1px solid black
+                @include an_lar(400px,350px)
+                h3
+                    font-size: 20px
+            .tarjeta_1
+                background-color: white
+                @include padding(auto,1rem,auto,1.5rem)
+                div.secciones                  
+                    display: grid
+                    grid-template-columns: 10rem 10rem
+                    align-content: center
+                    justify-content: center
+                    margin-left: -10px
+                    div
+                        padding-top: 20px               
+                    img
+                        height: 5.9rem
+                        padding: 0
+                    span
+                        font-size: 12px
+                        color: black
+                        @include margin(-20px,3px)
+                        
+                a.sec3
+                    margin-top: 2.9rem
+                    font-size: 13px
+                    color: #007185
+                a.sec3:hover 
+                    color: #C7511F
+                    text-decoration: underline
+            .tarjeta_2
+                background-color: white
+                @include padding(auto,20px,auto,25px)
+                div
+                    margin-bottom: 9px
+                    img.img_sec_2
+                        padding-top: 10px
+                        @include an_lar(305px,300px)
+            a.sec3
+                //margin-top: 6px
+                font-size: 13px
+                color: #007185
+            
+
+            a.sec3:hover 
+                color: #C7511F
+                text-decoration: underline
+            img.img_sec_3
+                margin-top: 33px
+                height: 250px
+            img.img_sec_5
+                @include margin(10px,auto,auto,10px)
+                @include an_lar(280px,310px)
+            img.img_sec_7
+                margin-top: 10px             
+                @include an_lar(240px,300px)
+            img.img_sec_9 
+                @include margin(20px,auto,auto,12px)
+                width: 310px
+            img.img_sec_10 
+                @include margin(40px,auto,auto,10px)
+                width: 310px
+            img.img_sec_11 
+                @include margin($mt:40px,$mb:10px)
+                width: 310px
+            img.img_sec_14
+                @include margin(13px,12px,auto,-1px)
+                @include an_lar(290px,285px)
+            span.span_tarje_1a
+                background-color: #CC0C39
+                color: white
+                padding: 5px
+                border-radius: 4px 
+                font-size: 13px
+            span.span_tarje_1b                
+                color: #D22850
+                font-weight: 700
+                padding: 5px 
+                font-size: 12px
+            span.span_tarje_1c                
+                color: black
+                display: block
+                padding-top: 10px
+                font-size: 13px
+                margin-bottom: 15px
+            a.sec3_6 
+                font-size: 13px
+                color: #007185
+                margin-top: 20px
+footer
+    margin-top: 5px
+    div.footer-1
+        padding-top: 40px
+        margin-bottom: 20px
+        .div1
+            width: 100%
+            display: flex
+            flex-direction: column           
+            text-align: center
+            color: black
+            border: 1px solid #DDDDDD
+            @include padding(20px,auto,auto,30px)
+            p
+                margin-bottom: 5px
+            .div1-1
+                padding-top: 5px
+                font-size: 12px
+                a
+                    text-decoration: none
+                    color: #007185
+                    margin-left: 2px
+            button
+                background-color: #ffd261
+                @include an_lar(25px,230px)
+                @include Flex()
+                margin: auto
+                border: none
+                text-decoration: none
+                //outline: none
+                box-shadow: inset 0px 9px 0px #ffe093, 
+                border-radius: 5px
+                font-weight: 750
+                background-image: linear-gradient(to top, ffd261, transparent)
+            button:hover 
+                cursor: pointer
+    div.volver_inic
+        @include an_lar(50px,100%)
+        background-color: #37475A    
+        a
+            text-decoration: none
+            color: white
+            font-size: 13px
+            @include Flex()
+            @include padding(16px,auto,auto,15px)
+        a:hover 
+            text-decoration: underline
+            background-color: #485769
+    
+    div.footer-2
+        background-color: #232F3E
+        padding-top: 50px
+        height: 450px
+        @include Flex(center,flex_start)
+        h3
+            font-size: 17px
+            color: white
+            font-weight: 750
+        li
+            margin-top: 15px
+            list-style: none
+            a
+                text-decoration: none
+                color: #DDDDDD
+                font-size: 14px
+        div.footer-2_1
+            margin-right: 40px           
+            width: 70px
+            a:hover 
+                text-decoration: underline
+        div.footer-2_2
+            margin-left: 80px
+            width: 220px
+            a:hover 
+                text-decoration: underline
+            //margin-right: 100px
+        div.footer-2_3
+            @include margin($ml:80px,$mr:100px)
+            width: 250px
+            a:hover 
+                text-decoration: underline
+        div.footer-2_4
+            width: 145px
+            a:hover 
+                text-decoration: underline
+    
+    div.footer-3
+        @include Flex()
+        background-color: #232F3E
+        border-top: 1px solid #919599
+        height: 100px
+        font-size: 13px
+        .dropdown_3 
+            position: relative
+            display: inline-block   
+            height: 10  
+        .footer-3_2
+            i
+                font-size: 16px
+                padding: 2px
+        .dropdown-content_footer
+
+            color: gray
+            font-size: 13px
+            display: none
+            position: absolute
+            background-color: #FFFFFF
+            min-width: 250px
+            height: 300px
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+            z-index: 5
+            @include padding(20px,15px,15px,20px)
+            p
+                a   
+                    color: #007185
+                    font-size: 12px
+            a
+                margin-left: 35px
+                font-size: 12px
+            hr 
+                @include margin($mt:4px,$mb:4px)
+        
+        .espaciador
+            @include padding(5px,auto,auto,5px)
+            img
+                width: 18px
+                margin-right: 5px
+            input
+                margin: 2px
+            .a_1
+                padding-right: 0px
+                margin-left: 160px
+                font-size: 13px
+
+        .dropdown_3:hover .dropdown-content_footer
+            display: block
+        .footer-3_1
+            margin-right: 5rem
+            position: relative
+            img
+                @include margin(10px,-80px)
+                height: 50px
+        .footer-3_4
+            a
+                display: flex
+                
+                img
+                    @include margin(-2px,auto,8px)
+                    height: 20px
+                    width: 20px
+                span
+                    padding-top: 2px                  
+
+        .border
+            border: 1px solid #919599
+            height: 35px
+            border-radius: 3px
+            margin-left: 20px
+            @include padding(auto,5px,5px,5px)
+            a
+                text-decoration: none
+                color: white
+                span
+                    color: #919599
+    div.footer-4 
+        @include Flex(center,flex_start)
+        height: 550px
+        padding-top: 20px
+        background-color: #131A22
+        margin: auto
+        div.footer-4_1
+            margin-right: 30px           
+            width: 100px
+        div.footer-4_2
+            margin-left: 20px
+            width: 145px
+            //margin-right: 100px
+        div.footer-4_3
+            @include margin($ml:40px,$mr:20px)
+            width: 140px
+        div.footer-4_4
+            @include margin($ml:20px,$mr:20px)
+            width: 155px
+        div.footer-4_5
+            @include margin($ml:20px,$mr:20px)
+            width: 150px
+        div.footer-4_6
+            @include margin($ml:20px,$mr:20px)
+            width: 140px
+        li
+            list-style: none
+            @include margin($mt:35px,$mr:20px)
+            height: 60px          
+            a
+                text-decoration: none
+                font-size: 13px
+                color: white
+                span
+                    display: block
+                .span2
+                    color: #919599
+                    font-size: 10
+            a:hover 
+                text-decoration: underline
+                .a1
+                    color: #919599
+            .a1
+                color: #919599
+    .final
+        background-color: #131A22
+        height: 70px
+        padding-bottom: 30px
+        text-align: center
+        color: #DDDDDD   
+        font-size: 12px  
+        div
+            margin-bottom: 8px
+            a
+                margin-right: 15px
+                color: #DDDDDD
+            img
+                position: absolute
+                height: 23px
+                margin-top: -5px
+
+
+
+
+
+
+                
+
+
+
+
